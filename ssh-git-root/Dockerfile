@@ -10,4 +10,4 @@ RUN mkdir /var/run/sshd
 RUN rm -f /var/run/nologin
 
 EXPOSE 22
-CMD exec /usr/sbin/sshd -D
+CMD exec ssh-keygen -A && /usr/sbin/sshd -D
